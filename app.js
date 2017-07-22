@@ -2,8 +2,7 @@
 // Solution : Using NodeJS to connect Github API
 // to get profile info
 
-let profile = require('./profile.js')
+let profile  = require('./profile.js')
 
-profile.get('vincentw16')
-profile.get('yofri')
-profile.get('ronishak')
+let profiles = process.argv.slice(2) // array slice
+profiles.map(profile.get)
