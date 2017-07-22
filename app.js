@@ -23,10 +23,12 @@ let request = https.request(options, (response) =>{
 		//TODO: [x] Parse the data
 		// Convert String to JSON (JavaScript Object)
 		let profile = JSON.parse(body)
-		console.log(profile.avatar_url) // 1jam 16mnt
-	})
 
-	//TODO: Print the data
+		//TODO: [x] Print the data
+		//console.log(profile.login + ' owns ' + profile.public_repos + ' repos')
+		
+		console.log(`${profile.login} owns ${profile.public_repos} repos and has ${profile.followers} followers.`)
+	})
 }) 											  
 request.end()
 
